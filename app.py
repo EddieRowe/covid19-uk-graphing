@@ -8,7 +8,7 @@ from uk_covid19 import Cov19API
 
 
 app = dash.Dash(__name__)
-
+server = app.server
 
 ### cov19api
 
@@ -48,7 +48,7 @@ app.layout = html.Div(children=[
     html.H1(children='Covid19 UK Data.'),
 
     html.Div(children=datestring),
-    html.Div(children='Dash, Plotly.py, Pandas, and PHE datasets.'),
+    html.Div(children='Using Dash, Plotly.py, Pandas, and PHE datasets.'),
     
     dcc.Graph(
         id='chart_cases_line',
