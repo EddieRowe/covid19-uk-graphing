@@ -3,14 +3,14 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
-import pandas as pd
 from uk_covid19 import Cov19API
 
 
 app = dash.Dash(__name__)
 server = app.server
+app.title = "Covid19 UK Data Graphing"
 
-### cov19api
+### PHE API
 
 datastructure = {
     "Date": "date",
@@ -31,12 +31,12 @@ data = api.get_json()
 # latest website update
 release_timestamp = Cov19API.get_release_timestamp()
 
-# format it
+# formatting
 release_timestamp_formatted = release_timestamp.replace('Z', '')
 date = datetime.fromisoformat(release_timestamp_formatted)
 date_ = date.strftime("%d/%m/%Y, %H:%M")
-datestring = "Public Health England data, last updated ", date_, "."
-### end cov19api
+datestring = "Latest PHE data from ", date_, "."
+### end of PHE API
 
 df = data['data'];
 
@@ -49,12 +49,14 @@ fig2 = px.line(df, x="Date", y="Cases", color="Area",
                width=800, height=400)
 
 app.layout = html.Div(children=[
-    html.H1(children='Covid19 UK Data.', style={'textAlign': 'center'}),
+    html.H1(children='Covid19 UK Data Graphing', style={'textAlign': 'center'}),
+
+    html.Div(children='Using Dash & Plotly, with data from Public Health England.', 
+             style={'textAlign': 'center'}),
 
     html.Div(children=datestring, style={'textAlign': 'center'}),
     
-    html.Div(children='Using Dash, Plotly.py, Pandas, and PHE datasets.', 
-             style={'textAlign': 'center'}),
+    html.Div(children=dcc.Link('View source on github', href='https://github.com/EddieRowe/covid19-uk-graphing'), style={'textAlign': 'center'}),
     
     dcc.Graph(
         id='chart_cases_line',
@@ -69,4 +71,4 @@ app.layout = html.Div(children=[
 ], style={'margin': 'auto', 'width': '50%'})
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
