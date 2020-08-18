@@ -44,9 +44,14 @@ df = data['data'];
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
               title="Deaths by Nation", 
               width=800, height=400)
+
+fig.update_layout(hovermode='x')
+
 fig2 = px.line(df, x="Date", y="Cases", color="Area", 
                title="Cases by Nation", 
                width=800, height=400)
+
+fig2.update_layout(hovermode='x')
 
 app.layout = html.Div(children=[
     html.H1(children='Covid19 UK Data Graphing', style={'textAlign': 'center'}),
@@ -60,12 +65,20 @@ app.layout = html.Div(children=[
     
     dcc.Graph(
         id='chart_cases_line',
-        figure=fig2
+        figure=fig2,
+        config={
+        'displaylogo': False,
+        'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
+    }
     ),
     
     dcc.Graph(
         id='chart_deaths_line',
-        figure=fig
+        figure=fig,
+        config={
+        'displaylogo': False,
+        'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
+    }
     )
     
 ], style={'margin': 'auto', 'width': '50%'})
