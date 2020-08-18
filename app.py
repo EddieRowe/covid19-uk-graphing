@@ -41,14 +41,20 @@ datestring = "Public Health England data, last updated ", date_, "."
 df = data['data'];
 
 
-fig = px.line(df, x="Date", y="Deaths", color="Area")
-fig2 = px.line(df, x="Date", y="Cases", color="Area")
+fig = px.line(df, x="Date", y="Deaths", color="Area", 
+              title="Deaths by Nation", 
+              width=800, height=400)
+fig2 = px.line(df, x="Date", y="Cases", color="Area", 
+               title="Cases by Nation", 
+               width=800, height=400)
 
 app.layout = html.Div(children=[
-    html.H1(children='Covid19 UK Data.'),
+    html.H1(children='Covid19 UK Data.', style={'textAlign': 'center'}),
 
-    html.Div(children=datestring),
-    html.Div(children='Using Dash, Plotly.py, Pandas, and PHE datasets.'),
+    html.Div(children=datestring, style={'textAlign': 'center'}),
+    
+    html.Div(children='Using Dash, Plotly.py, Pandas, and PHE datasets.', 
+             style={'textAlign': 'center'}),
     
     dcc.Graph(
         id='chart_cases_line',
@@ -60,7 +66,7 @@ app.layout = html.Div(children=[
         figure=fig
     )
     
-])
+], style={'margin': 'auto', 'width': '50%'})
 
 if __name__ == '__main__':
     app.run_server(debug=True)
