@@ -16,7 +16,7 @@ datastructure = {
     "Date": "date",
     "Area": "areaName",
     "Deaths": "newDeaths28DaysByPublishDate",
-    "Cases": "newCasesByPublishDate"
+    "Cases": "newCasesByPublishDate",
 }
 
 all_uk = [
@@ -25,7 +25,6 @@ all_uk = [
 
 # Instantiating the API object
 api = Cov19API(filters=all_uk, structure=datastructure)
-
 data = api.get_json()
 
 # latest website update
@@ -35,16 +34,17 @@ release_timestamp = Cov19API.get_release_timestamp()
 release_timestamp_formatted = release_timestamp.replace('Z', '')
 date = datetime.fromisoformat(release_timestamp_formatted)
 date_ = date.strftime("%d/%m/%Y, %H:%M")
-datestring = "Latest PHE data from ", date_, "."
+datestring = "Latest PHE data from ", date_, " GMT."
 ### end of PHE API
 
 df = data['data'];
 # convert to pandas dataframe for rolling avg later
 df = pd.DataFrame(df)
 
+
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
               title="Deaths by Nation", 
-              width=700, height=400,
+              width=1000, height=400,
               template="plotly_dark",
               color_discrete_sequence=px.colors.qualitative.Plotly)
 
@@ -55,8 +55,11 @@ fig.update_layout(hovermode='x',
 
 fig2 = px.line(df, x="Date", y="Cases", color="Area", 
                title="Cases by Nation", 
-               width=700, height=400,
+               width=1000, height=400,
               template="plotly_dark")
+
+df['Cases'] = df['Cases'].rolling(window=7).mean()
+
 
 fig2.update_layout(hovermode='x', 
                   plot_bgcolor='#232627', 
@@ -68,7 +71,7 @@ df['Deaths'] = df['Deaths'].rolling(window=7).mean()
 
 fig3 = px.line(df, x="Date", y="Deaths", color="Area", 
                title="Deaths by Nation (7-day rolling average)", 
-               width=700, height=400,
+               width=1000, height=400,
               template="plotly_dark")
 
 fig3.update_layout(hovermode='x', 
@@ -89,6 +92,8 @@ app.layout = html.Div(children=[
     html.Div(children=dcc.Link('View source on GitHub.', href='https://github.com/EddieRowe/covid19-uk-graphing', target='_blank'), style={'textAlign': 'center'}),
     
     html.Br(),
+
+    
     
     html.Div([
     dcc.Graph(
