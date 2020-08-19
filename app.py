@@ -9,7 +9,7 @@ import pandas as pd
 
 app = dash.Dash(__name__)
 server = app.server
-app.title = "Covid19 UK Data Graphing"
+app.title = "COVID-19 UK Data Graphing"
 
 ### PHE API
 datastructure = {
@@ -80,9 +80,12 @@ fig3.update_layout(hovermode='x',
 
 
 
+
+
+
 app.layout = html.Div(children=[
     
-    html.H1(children='Covid19 UK Data Graphing', style={'textAlign': 'center'}),
+    html.H1(children='COVID-19 UK Data Graphing', style={'textAlign': 'center'}),
 
     html.P(children='Graphs generated using the latest data from Public Health England.', 
              style={'textAlign': 'center'}),
