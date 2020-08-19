@@ -81,7 +81,7 @@ app.layout = html.Div(children=[
     
     html.H1(children='Covid19 UK Data Graphing', style={'textAlign': 'center'}),
 
-    html.P(children='Using Dash, Plotly, and Pandas, with the latest data from Public Health England.', 
+    html.P(children='Graphs generated using the latest data from Public Health England.', 
              style={'textAlign': 'center'}),
 
     html.P(children=datestring, style={'textAlign': 'center'}),
