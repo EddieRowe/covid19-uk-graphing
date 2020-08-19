@@ -44,15 +44,23 @@ df = pd.DataFrame(df)
 
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
               title="Deaths by Nation", 
-              width=800, height=400)
+              width=700, height=400,
+              template="plotly_dark",
+              color_discrete_sequence=px.colors.qualitative.Plotly)
 
-fig.update_layout(hovermode='x')
+fig.update_layout(hovermode='x', 
+                  plot_bgcolor='#232627', 
+                  paper_bgcolor='#232627'
+                  )
 
 fig2 = px.line(df, x="Date", y="Cases", color="Area", 
                title="Cases by Nation", 
-               width=800, height=400)
+               width=700, height=400,
+              template="plotly_dark")
 
-fig2.update_layout(hovermode='x')
+fig2.update_layout(hovermode='x', 
+                  plot_bgcolor='#232627', 
+                  paper_bgcolor='#232627')
 
 
 # 7 day rolling avg deaths
@@ -60,21 +68,29 @@ df['Deaths'] = df['Deaths'].rolling(window=7).mean()
 
 fig3 = px.line(df, x="Date", y="Deaths", color="Area", 
                title="Deaths by Nation (7-day rolling average)", 
-               width=800, height=400)
-fig3.update_layout(hovermode='x')
+               width=700, height=400,
+              template="plotly_dark")
+
+fig3.update_layout(hovermode='x', 
+                  plot_bgcolor='#232627', 
+                  paper_bgcolor='#232627')
 
 
 
 app.layout = html.Div(children=[
+    
     html.H1(children='Covid19 UK Data Graphing', style={'textAlign': 'center'}),
 
-    html.Div(children='Using Dash, Plotly, and Pandas, with the latest data from Public Health England.', 
+    html.P(children='Using Dash, Plotly, and Pandas, with the latest data from Public Health England.', 
              style={'textAlign': 'center'}),
 
-    html.Div(children=datestring, style={'textAlign': 'center'}),
+    html.P(children=datestring, style={'textAlign': 'center'}),
     
     html.Div(children=dcc.Link('View source on GitHub.', href='https://github.com/EddieRowe/covid19-uk-graphing', target='_blank'), style={'textAlign': 'center'}),
     
+    html.Br(),
+    
+    html.Div([
     dcc.Graph(
         id='chart_cases_line',
         figure=fig2,
@@ -82,8 +98,10 @@ app.layout = html.Div(children=[
         'displaylogo': False,
         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
     }
-    ),
+    )], style = {'width': '100%', 'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
     
+    
+    html.Div([
     dcc.Graph(
         id='chart_deaths_line',
         figure=fig,
@@ -91,8 +109,9 @@ app.layout = html.Div(children=[
         'displaylogo': False,
         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
         }
-    ),
+    )], style = {'width': '100%', 'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
         
+        html.Div([
     dcc.Graph(
         id='chart_avgdeaths_line',
         figure=fig3,
@@ -100,7 +119,13 @@ app.layout = html.Div(children=[
         'displaylogo': False,
         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
         }
-    )
+    )], style = {'width': '100%', 'display': 'flex', 'align-items': 'center', 'justify-content': 'center'}),
+    
+    html.Br(),
+    
+    html.Div(children=dcc.Link('code.eddierowe.com', href='https://code.eddierowe.com', target='_blank'), style={'textAlign': 'center'}),
+    
+    html.Br()
     
     
 ], style={'margin': 'auto', 'width': '50%'})

@@ -1,0 +1,40 @@
+body {
+    background: #232627;
+    margin: 0;
+    font-family: "Sarabun", sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    color: #1cdc96;
+}
+
+p {
+    padding: 5px 10px 5px 10px;
+    font-size: 32px;
+    color: rgb(180, 180, 180);
+}
+
+a:link, a:visited {
+    font-size: 32px;
+    color: rgb(180, 180, 180);
+}
+
+a:hover, a:active {
+    color: rgb(120, 120, 120);
+}
+
+
+/*desktop*/ 
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 100%;
+    }
+    
+    a:link, a:visited {
+    font-size: 100%;
+    }
+} 
