@@ -2,25 +2,41 @@ body {
     background: #232627;
     margin: 0;
     font-family: "Sarabun", sans-serif;
+    margin: auto;
+    width: 50%;
 }
 
 h1 {
     font-size: 80px;
     color: #1cdc96;
+    text-align: center;
 }
 
 p {
     font-size: 32px;
     color: rgb(180, 180, 180);
+    text-align: center;
 }
 
 a:link, a:visited {
     font-size: 32px;
     color: rgb(180, 180, 180);
+    text-align: center;
 }
 
 a:hover, a:active {
     color: rgb(120, 120, 120);
+}
+
+.graphs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centeredtext {
+    text-align: center;
 }
 
 
@@ -34,6 +50,6 @@ a:hover, a:active {
     }
     
     a:link, a:visited {
-    font-size: 100%;
+        font-size: 100%;
     }
 } 
