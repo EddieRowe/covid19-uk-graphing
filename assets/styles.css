@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: "Sarabun", sans-serif;
     margin: auto;
-    width: 50%;
+    width: 90%;
 }
 
 h1 {
@@ -31,6 +31,7 @@ a:hover, a:active {
 .graphs {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -39,9 +40,11 @@ a:hover, a:active {
     text-align: center;
 }
 
-
 /*desktop*/ 
 @media only screen and (min-width: 1000px) {
+    body {
+    width: 50%;
+    }
     h1 {
         font-size: 40px;
     }
@@ -51,5 +54,13 @@ a:hover, a:active {
     
     a:link, a:visited {
         font-size: 100%;
+    }
+    
+    .graphs {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
     }
 } 

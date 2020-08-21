@@ -243,7 +243,8 @@ app.layout = html.Div(
                         'Created by Eddie Rowe -  ',
                         html.A('code.eddierowe.com', 
                                 href='https://code.eddierowe.com/', 
-                                target='_blank'), ' - ',
+                                target='_blank'), 
+                        html.Br(),
                         html.A('View source on GitHub.', 
                                 href='https://github.com/EddieRowe/covid19-uk-graphing/', 
                                 target='_blank')
