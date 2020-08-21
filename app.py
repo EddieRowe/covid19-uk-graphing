@@ -20,14 +20,26 @@ datastructure = {
     "Cases": "newCasesByPublishDate"
 }
 
+datastructure2 = {
+    "Area": "areaName",
+    "Cases": "cumCasesByPublishDate"
+}
+
 # Specify region type (nation/region/ltla)
 all_uk = [
     'areaType=nation'
 ]
 
+all_ltla = [
+    'areaType=ltla'
+]
+
 # Instantiate API object
 phe_api = Cov19API(filters=all_uk, structure=datastructure)
 data = phe_api.get_json()
+
+phe_api2 = Cov19API(filters=all_ltla, structure=datastructure2, latest_by="newCasesByPublishDate")
+data2 = phe_api2.get_json()
 
 # Latest website update
 release_timestamp = Cov19API.get_release_timestamp()
@@ -45,6 +57,8 @@ df = data['data'];
 # Convert to pandas dataframe
 df = pd.DataFrame(df)
 
+df2 = data2['data'];
+df2 = pd.DataFrame(df2)
 
 # Line graph of deaths by date
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
@@ -108,6 +122,41 @@ fig4.update_layout(hovermode='x unified',
 
 fig4.update_traces(hovertemplate = '<br>Cases: %{y}')
 
+# Assign coords to ltlas
+df3 = pd.read_csv('coordinateList', header = None)
+df2['lat'] = df3[0];
+df2['lon'] = df3[1];
+
+# For daily cases history
+# df2 = df2.sort_values(by=['Date'])
+
+# Scatter graph of total cases by area
+fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
+                     color="Cases",
+                     title="Total Cumulative Cases by Local Authority", 
+                     width=1000, height=800,
+                     hover_name="Area",
+                     size="Cases",
+                     scope="europe",
+                     template="plotly_dark",
+                     center={"lat": 53.643666, "lon": -3.898219},
+                     #animation_frame="Date"
+              )
+
+fig_scatter.update_geos(
+    resolution=50,
+    fitbounds="locations"
+)
+
+fig_scatter.update_layout(hovermode='x unified', 
+                  plot_bgcolor='#232627', 
+                  paper_bgcolor='#232627',
+                  margin={"r":0,"t":50,"l":0,"b":0}    
+)
+
+fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases: %{marker.size}')
+
+
 
 # Webpage layout, (css is loaded from assets/styles.css)
 app.layout = html.Div(
@@ -166,6 +215,21 @@ app.layout = html.Div(
                 dcc.Graph(
                     id='chart_avgdeaths_line',
                     figure=fig3,
+                    config={
+                    'displaylogo': False,
+                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
+                    }
+                )
+            ]
+        ),
+                    
+                    
+        html.Div(
+            className="graphs",
+            children=[
+                dcc.Graph(
+                    id='chart_cases_scatter',
+                    figure=fig_scatter,
                     config={
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
