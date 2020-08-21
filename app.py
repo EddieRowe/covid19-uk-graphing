@@ -168,11 +168,7 @@ app.layout = html.Div(
                 html.H1('COVID-19 UK Data Graphing'),
 
                 html.P('Graphs generated using the latest data from Public Health England.'),
-                html.P(datestring),
-                
-                dcc.Link('View source on GitHub.', 
-                        href='https://github.com/EddieRowe/covid19-uk-graphing', 
-                        target='_blank')
+                html.P(datestring)
             ]
         ),
         
@@ -247,6 +243,9 @@ app.layout = html.Div(
                         'Created by Eddie Rowe -  ',
                         html.A('code.eddierowe.com', 
                                 href='https://code.eddierowe.com/', 
+                                target='_blank'), ' - ',
+                        html.A('View source on GitHub.', 
+                                href='https://github.com/EddieRowe/covid19-uk-graphing/', 
                                 target='_blank')
                     ]
                 )
