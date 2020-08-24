@@ -60,6 +60,9 @@ df = pd.DataFrame(df)
 df2 = data2['data'];
 df2 = pd.DataFrame(df2)
 
+for entry in df2['Area'] :
+    print("", entry)
+
 # Line graph of deaths by date
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
               title="Deaths by Nation", 
