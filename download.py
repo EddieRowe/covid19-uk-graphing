@@ -43,3 +43,6 @@ df2 = pd.DataFrame(df2)
 # Save data
 df.to_csv('new_cases.csv')
 df2.to_csv('cum_cases.csv')
+
+#for entry in df2['Area'] :
+#    print(entry)
