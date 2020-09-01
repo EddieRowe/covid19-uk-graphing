@@ -27,7 +27,7 @@ desc = 'Graphs generated using recent data from Public Health England.'
 
 # Line graph of deaths by date
 fig = px.line(df, x="Date", y="Deaths", color="Area", 
-            title="Deaths by Nation", 
+            title="Daily Deaths by Nation", 
             width=600, height=350,
             template="plotly_dark"
 )
@@ -43,7 +43,7 @@ fig.update_traces(hovertemplate = '<br>Deaths: %{y}')
 
 # Line graph of cases by date
 fig2 = px.line(df, x="Date", y="Cases", color="Area", 
-            title="Cases by Nation", 
+            title="Daily Cases by Nation", 
             width=600, height=350,
             template="plotly_dark"
 )
@@ -61,7 +61,7 @@ df['Cases'] = df['Cases'].rolling(window=7).mean()
 
 # Line graph of deaths by date (7 day rolling avg)
 fig3 = px.line(df, x="Date", y="Deaths", color="Area", 
-            title="Deaths by Nation (7-day rolling average)", 
+            title="Daily Deaths by Nation (7-day rolling average)", 
             width=600, height=350,
             template="plotly_dark"
 )
@@ -75,7 +75,7 @@ fig3.update_traces(hovertemplate = '<br>Deaths: %{y}')
 
 # Line graph of cases by date (7 day rolling avg)
 fig4 = px.line(df, x="Date", y="Cases", color="Area", 
-            title="Cases by Nation (7-day rolling average)", 
+            title="Daily Cases by Nation (7-day rolling average)", 
             width=600, height=350,
             template="plotly_dark"
 )
