@@ -8,12 +8,14 @@ datastructure = {
 "Date": "date",
 "Area": "areaName",
 "Deaths": "newDeaths28DaysByPublishDate",
-"Cases": "newCasesByPublishDate"
+"Cases": "newCasesByPublishDate",
+"Tests": "newTestsByPublishDate"
 }
 
 datastructure2 = {
 "Area": "areaName",
-"Cases": "cumCasesByPublishDate"
+"Cases": "cumCasesByPublishDate",
+"Rate": "cumCasesByPublishDateRate"
 }
 
 # Specify region type (nation/region/ltla)

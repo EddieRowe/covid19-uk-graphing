@@ -55,9 +55,11 @@ fig2.update_layout(hovermode='x unified',
 
 fig2.update_traces(hovertemplate = '<br>Cases: %{y}')
 
+
 # Calculate 7 day rolling avgs
 df['Deaths'] = df['Deaths'].rolling(window=7).mean()
 df['Cases'] = df['Cases'].rolling(window=7).mean()
+df['Tests'] = df['Tests'].rolling(window=7).mean()
 
 # Line graph of deaths by date (7 day rolling avg)
 fig3 = px.line(df, x="Date", y="Deaths", color="Area", 
@@ -92,13 +94,28 @@ df3 = pd.read_csv('coordinateList', header = None)
 df2['lat'] = df3[0];
 df2['lon'] = df3[1];
 
+
+# Line graph of avg tests by date
+fig5 = px.line(df, x="Date", y="Tests", color="Area", 
+            title="Daily Tests by Nation (7-day rolling average)", 
+            width=600, height=350,
+            template="plotly_dark"
+)
+
+fig5.update_layout(hovermode='x unified', 
+                plot_bgcolor='#232627', 
+                paper_bgcolor='#232627'
+)
+
+fig5.update_traces(hovertemplate = '<br>Tests: %{y}')
+
 # Scatter graph of total cases by area
 fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
-                    color="Cases",
-                    title="Total Cumulative Cases by Local Authority", 
+                    color="Rate",
+                    title="Total Cases per 100k by Local Authority", 
                     width=1000, height=800,
                     hover_name="Area",
-                    size="Cases",
+                    size="Rate",
                     scope="europe",
                     template="plotly_dark",
                     center={"lat": 53.643666, "lon": -3.898219},
@@ -116,7 +133,7 @@ fig_scatter.update_layout(hovermode='x unified',
                 margin={"r":0,"t":50,"l":0,"b":0}    
 )
 
-fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases: %{marker.size}')
+fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
 
 
 
@@ -150,6 +167,15 @@ app.layout = html.Div(
                 dcc.Graph(
                     id='chart_avgcases_line',
                     figure=fig4,
+                    config={
+                        'displaylogo': False,
+                        'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
+                    }
+                ),
+                    
+                dcc.Graph(
+                    id='chart_avgtests_line',
+                    figure=fig5,
                     config={
                         'displaylogo': False,
                         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
