@@ -171,15 +171,6 @@ app.layout = html.Div(
                         'displaylogo': False,
                         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
                     }
-                ),
-                    
-                dcc.Graph(
-                    id='chart_avgtests_line',
-                    figure=fig5,
-                    config={
-                        'displaylogo': False,
-                        'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
-                    }
                 )
             ]
         ),
@@ -206,7 +197,20 @@ app.layout = html.Div(
                 )
             ]
         ),
-                        
+               
+        html.Div(
+            className="graphs",
+            children=[             
+                dcc.Graph(
+                    id='chart_avgtests_line',
+                    figure=fig5,
+                    config={
+                        'displaylogo': False,
+                        'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
+                    }
+                )
+            ]
+        ),                  
                         
         html.Div(
             className="graphs",
