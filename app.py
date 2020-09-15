@@ -89,7 +89,6 @@ fig4.update_layout(hovermode='x unified',
 
 fig4.update_traces(hovertemplate = '<br>Cases: %{y}')
 
-### Temporarily removed map due to PHE constantly removing local authorities... ###
 # Assign coords to ltlas
 df3 = pd.read_csv('coordinateList', header = None)
 df2['lat'] = df3[0];
@@ -109,7 +108,6 @@ fig5.update_layout(hovermode='x unified',
 
 fig5.update_traces(hovertemplate = '<br>Tests: %{y}')
 
-### Temporarily removed map due to PHE constantly removing local authorities... ###
 # Scatter graph of total cases by area
 fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
                     color="Rate",
@@ -213,7 +211,6 @@ app.layout = html.Div(
             ]
         ),         
 
-        ### Temporarily removed map due to PHE constantly removing local authorities... ###                     
         html.Div(
             className="graphs",
             children=[
@@ -224,18 +221,6 @@ app.layout = html.Div(
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
                     }
-                )
-            ]
-        ),
-               
-
-        html.Div(
-            className="centeredtext",
-            children=[
-                html.H1(
-                    [
-                        'Map temporarily removed.'
-                    ]
                 )
             ]
         ),       
