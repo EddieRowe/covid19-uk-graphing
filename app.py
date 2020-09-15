@@ -91,9 +91,9 @@ fig4.update_traces(hovertemplate = '<br>Cases: %{y}')
 
 ### Temporarily removed map due to PHE constantly removing local authorities... ###
 # Assign coords to ltlas
-#df3 = pd.read_csv('coordinateList', header = None)
-#df2['lat'] = df3[0];
-#df2['lon'] = df3[1];
+df3 = pd.read_csv('coordinateList', header = None)
+df2['lat'] = df3[0];
+df2['lon'] = df3[1];
 
 # Line graph of avg tests by date
 fig5 = px.line(df, x="Date", y="Tests", color="Area", 
@@ -111,30 +111,30 @@ fig5.update_traces(hovertemplate = '<br>Tests: %{y}')
 
 ### Temporarily removed map due to PHE constantly removing local authorities... ###
 # Scatter graph of total cases by area
-#fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
-#                    color="Rate",
-#                    title="Total Cases per 100k by Local Authority", 
-#                    width=1000, height=800,
-#                    hover_name="Area",
-#                    size="Rate",
-#                    scope="europe",
-#                    template="plotly_dark",
-#                    center={"lat": 53.643666, "lon": -3.898219},
-#                    #animation_frame="Date"
-#            )
-#
-#fig_scatter.update_geos(
-#    resolution=50,
-#    fitbounds="locations"
-#)
-#
-#fig_scatter.update_layout(hovermode='x unified', 
-#                plot_bgcolor='#232627', 
-#                paper_bgcolor='#232627',
-#                margin={"r":0,"t":50,"l":0,"b":0}    
-#)
-#
-#fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
+fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
+                    color="Rate",
+                    title="Total Cases per 100k by Local Authority", 
+                    width=1000, height=800,
+                    hover_name="Area",
+                    size="Rate",
+                    scope="europe",
+                    template="plotly_dark",
+                    center={"lat": 53.643666, "lon": -3.898219},
+                    #animation_frame="Date"
+            )
+
+fig_scatter.update_geos(
+    resolution=50,
+    fitbounds="locations"
+)
+
+fig_scatter.update_layout(hovermode='x unified', 
+                plot_bgcolor='#232627', 
+                paper_bgcolor='#232627',
+                margin={"r":0,"t":50,"l":0,"b":0}    
+)
+
+fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
 
 
 
@@ -214,19 +214,19 @@ app.layout = html.Div(
         ),         
 
         ### Temporarily removed map due to PHE constantly removing local authorities... ###                     
-#        html.Div(
-#            className="graphs",
-#            children=[
-#                dcc.Graph(
-#                    id='chart_cases_scatter',
-#                    figure=fig_scatter,
-#                    config={
-#                    'displaylogo': False,
-#                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
-#                    }
-#                )
-#            ]
-#        ),
+        html.Div(
+            className="graphs",
+            children=[
+                dcc.Graph(
+                    id='chart_cases_scatter',
+                    figure=fig_scatter,
+                    config={
+                    'displaylogo': False,
+                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
+                    }
+                )
+            ]
+        ),
                
 
         html.Div(
