@@ -1,381 +1,381 @@
 ,Area,Cases,Rate
-0,Aberdeen City,1186,518.7
-1,Aberdeenshire,646,247.3
-2,Adur,215,334.4
-3,Allerdale,423,432.7
-4,Amber Valley,500,390.2
+0,Aberdeen City,1193,521.7
+1,Aberdeenshire,649,248.5
+2,Adur,224,348.4
+3,Allerdale,429,438.8
+4,Amber Valley,518,404.2
 5,Angus,530,456.1
-6,Antrim and Newtownabbey,709,494.1
-7,Ards and North Down,528,326.5
-8,Argyll and Bute,186,216.6
-9,"Armagh City, Banbridge and Craigavon",984,455.1
-10,Arun,381,237.0
-11,Ashfield,648,506.6
-12,Ashford,1376,1058.2
-13,Aylesbury Vale,869,427.6
+6,Antrim and Newtownabbey,746,519.8
+7,Ards and North Down,548,338.8
+8,Argyll and Bute,196,228.3
+9,"Armagh City, Banbridge and Craigavon",1031,476.9
+10,Arun,386,240.1
+11,Ashfield,676,528.5
+12,Ashford,1379,1060.5
+13,Aylesbury Vale,875,430.6
 14,Babergh,294,319.4
-15,Barking and Dagenham,955,448.6
-16,Barnet,2024,511.3
-17,Barnsley,2233,904.5
-18,Barrow-in-Furness,632,942.6
-19,Basildon,913,487.7
-20,Basingstoke and Deane,992,561.8
-21,Bassetlaw,679,578.1
-22,Bath and North East Somerset,455,235.4
-23,Bedford,1503,867.3
-24,Belfast,2032,591.5
-25,Bexley,1220,491.4
-26,Birmingham,7780,681.4
-27,Blaby,642,632.4
-28,Blackburn with Darwen,2038,1361.4
-29,Blackpool,1143,819.7
-30,Blaenau Gwent,389,556.8
-31,Bolsover,395,490.3
-32,Bolton,3047,1059.6
-33,Boston,509,725.4
-34,"Bournemouth, Christchurch and Poole",987,249.7
-35,Bracknell Forest,450,367.2
-36,Bradford,6899,1278.1
-37,Braintree,544,356.5
-38,Breckland,526,375.8
-39,Brent,2025,614.1
-40,Brentwood,333,432.3
-41,Bridgend,630,428.4
-42,Brighton and Hove,938,322.5
-43,"Bristol, City of",1625,350.7
-44,Broadland,446,341.0
-45,Bromley,1716,516.3
-46,Bromsgrove,614,614.7
-47,Broxbourne,346,355.7
-48,Broxtowe,532,466.5
-49,Burnley,735,826.6
-50,Bury,1779,931.5
-51,Caerphilly,1046,577.7
-52,Calderdale,1333,630.4
-53,Cambridge,418,334.9
-54,Camden,896,331.8
-55,Cannock Chase,372,369.2
-56,Canterbury,752,454.7
-57,Cardiff,2587,705.1
-58,Carlisle,822,756.4
-59,Carmarthenshire,878,465.1
-60,Castle Point,375,414.9
-61,Causeway Coast and Glens,442,305.2
-62,Central Bedfordshire,1399,484.7
-63,Ceredigion,86,118.3
-64,Charnwood,972,523.0
-65,Chelmsford,828,464.2
-66,Cheltenham,487,418.7
-67,Cherwell,773,513.6
-68,Cheshire East,2514,654.4
-69,Cheshire West and Chester,2249,655.5
-70,Chesterfield,558,531.9
-71,Chichester,319,263.4
-72,Chiltern,362,376.9
-73,Chorley,768,649.7
-74,City of Edinburgh,2028,386.3
-75,Clackmannanshire,211,409.4
-76,Colchester,774,397.5
-77,Conwy,756,645.0
-78,Copeland,376,551.5
-79,Corby,470,650.8
-80,Cornwall and Isles of Scilly,1026,179.4
-81,Cotswold,235,261.5
-82,County Durham,3784,713.8
-83,Coventry,1840,495.3
-84,Craven,295,516.3
-85,Crawley,502,446.6
-86,Croydon,2092,541.0
-87,Dacorum,645,416.8
-88,Darlington,656,614.2
-89,Dartford,775,688.2
-90,Daventry,323,375.8
-91,Denbighshire,840,877.8
-92,Derby,1486,577.5
-93,Derbyshire Dales,283,391.3
-94,Derry City and Strabane,308,203.6
-95,Doncaster,2133,683.9
-96,Dorset,707,186.8
-97,Dover,744,629.8
-98,Dudley,1542,479.5
-99,Dumfries and Galloway,326,219.0
-100,Dundee City,1122,751.4
-101,Ealing,1941,567.9
-102,East Ayrshire,501,410.6
-103,East Cambridgeshire,215,239.3
-104,East Devon,274,187.3
-105,East Dunbartonshire,619,569.8
-106,East Hampshire,554,453.0
-107,East Hertfordshire,483,322.5
-108,East Lindsey,284,200.4
-109,East Lothian,304,283.9
-110,East Northamptonshire,474,501.4
-111,East Renfrewshire,466,487.8
-112,East Riding of Yorkshire,1768,518.2
-113,East Staffordshire,740,617.9
-114,East Suffolk,935,374.8
-115,Eastbourne,498,480.0
-116,Eastleigh,472,353.3
-117,Eden,227,426.3
-118,Elmbridge,550,402.1
-119,Enfield,1478,442.8
-120,Epping Forest,573,435.1
-121,Epsom and Ewell,379,470.1
-122,Erewash,469,406.5
-123,Exeter,291,221.5
-124,Falkirk,740,459.9
-125,Fareham,338,290.8
-126,Fenland,521,511.5
-127,Fermanagh and Omagh,210,178.9
-128,Fife,1033,276.5
-129,Flintshire,811,519.5
-130,Folkestone and Hythe,824,729.2
-131,Forest of Dean,180,207.4
-132,Fylde,518,641.2
-133,Gateshead,1547,765.6
-134,Gedling,440,373.2
-135,Glasgow City,3334,526.6
-136,Gloucester,594,460.0
-137,Gosport,250,294.7
-138,Gravesham,653,610.6
-139,Great Yarmouth,421,423.8
-140,Greenwich,1125,390.7
-141,Guildford,641,430.2
-142,Gwynedd,645,517.8
-143,Hackney and City of London,1273,437.7
-144,Halton,804,621.3
-145,Hambleton,352,384.3
-146,Hammersmith and Fulham,997,538.5
-147,Harborough,461,491.4
-148,Haringey,1016,378.2
-149,Harlow,414,475.5
-150,Harrogate,862,536.0
-151,Harrow,1559,620.7
-152,Hart,299,308.0
-153,Hartlepool,723,771.9
-154,Hastings,180,194.3
-155,Havant,395,312.9
-156,Havering,1226,472.4
-157,"Herefordshire, County of",959,497.4
-158,Hertsmere,604,575.7
-159,High Peak,508,548.2
-160,Highland,285,120.8
-161,Hillingdon,1399,455.9
-162,Hinckley and Bosworth,620,548.0
-163,Horsham,576,400.6
-164,Hounslow,1406,517.8
-165,Huntingdonshire,973,546.7
-166,Hyndburn,574,708.3
-167,Inverclyde,390,501.3
-168,Ipswich,743,542.7
-169,Isle of Anglesey,474,676.7
-170,Isle of Wight,443,312.5
-171,Islington,731,301.5
-172,Kensington and Chelsea,757,484.9
-173,Kettering,745,732.0
-174,King's Lynn and West Norfolk,883,583.3
-175,"Kingston upon Hull, City of",1654,636.7
-176,Kingston upon Thames,870,490.1
-177,Kirklees,3308,752.2
-178,Knowsley,1198,794.1
-179,Lambeth,1693,519.3
-180,Lancaster,950,650.5
-181,Leeds,5249,661.8
-182,Leicester,6043,1706.0
-183,Lewes,412,399.0
-184,Lewisham,1411,461.3
-185,Lichfield,455,434.3
-186,Lincoln,365,367.6
-187,Lisburn and Castlereagh,728,498.6
-188,Liverpool,3255,653.6
-189,Luton,1809,849.1
-190,Maidstone,705,410.3
+15,Barking and Dagenham,991,465.5
+16,Barnet,2064,521.4
+17,Barnsley,2257,914.3
+18,Barrow-in-Furness,648,966.5
+19,Basildon,927,495.2
+20,Basingstoke and Deane,994,562.9
+21,Bassetlaw,687,584.9
+22,Bath and North East Somerset,458,237.0
+23,Bedford,1517,875.4
+24,Belfast,2109,613.9
+25,Bexley,1234,497.0
+26,Birmingham,8208,718.9
+27,Blaby,672,661.9
+28,Blackburn with Darwen,2113,1411.5
+29,Blackpool,1171,839.8
+30,Blaenau Gwent,402,575.4
+31,Bolsover,406,504.0
+32,Bolton,3302,1148.3
+33,Boston,516,735.3
+34,"Bournemouth, Christchurch and Poole",1027,259.8
+35,Bracknell Forest,457,372.9
+36,Bradford,7139,1322.6
+37,Braintree,546,357.8
+38,Breckland,536,382.9
+39,Brent,2068,627.1
+40,Brentwood,335,434.9
+41,Bridgend,651,442.7
+42,Brighton and Hove,968,332.8
+43,"Bristol, City of",1650,356.1
+44,Broadland,451,344.8
+45,Bromley,1740,523.6
+46,Bromsgrove,628,628.7
+47,Broxbourne,352,361.8
+48,Broxtowe,552,484.1
+49,Burnley,770,865.9
+50,Bury,1852,969.7
+51,Caerphilly,1146,632.9
+52,Calderdale,1384,654.5
+53,Cambridge,425,340.6
+54,Camden,921,341.1
+55,Cannock Chase,390,387.1
+56,Canterbury,754,455.9
+57,Cardiff,2625,715.4
+58,Carlisle,825,759.1
+59,Carmarthenshire,886,469.4
+60,Castle Point,388,429.3
+61,Causeway Coast and Glens,446,307.9
+62,Central Bedfordshire,1415,490.2
+63,Ceredigion,94,129.3
+64,Charnwood,998,537.0
+65,Chelmsford,839,470.3
+66,Cheltenham,493,423.9
+67,Cherwell,784,520.9
+68,Cheshire East,2562,666.9
+69,Cheshire West and Chester,2295,669.0
+70,Chesterfield,573,546.2
+71,Chichester,322,265.8
+72,Chiltern,368,383.1
+73,Chorley,788,666.6
+74,City of Edinburgh,2056,391.7
+75,Clackmannanshire,212,411.3
+76,Colchester,781,401.1
+77,Conwy,777,663.0
+78,Copeland,380,557.3
+79,Corby,476,659.1
+80,Cornwall and Isles of Scilly,1044,182.6
+81,Cotswold,236,262.6
+82,County Durham,3860,728.2
+83,Coventry,1895,510.1
+84,Craven,304,532.0
+85,Crawley,503,447.5
+86,Croydon,2121,548.5
+87,Dacorum,652,421.3
+88,Darlington,667,624.5
+89,Dartford,779,691.8
+90,Daventry,332,386.3
+91,Denbighshire,846,884.0
+92,Derby,1506,585.3
+93,Derbyshire Dales,287,396.8
+94,Derry City and Strabane,330,218.1
+95,Doncaster,2163,693.5
+96,Dorset,717,189.4
+97,Dover,746,631.5
+98,Dudley,1590,494.4
+99,Dumfries and Galloway,331,222.4
+100,Dundee City,1126,754.1
+101,Ealing,1978,578.7
+102,East Ayrshire,508,416.4
+103,East Cambridgeshire,216,240.4
+104,East Devon,277,189.4
+105,East Dunbartonshire,642,590.9
+106,East Hampshire,560,457.9
+107,East Hertfordshire,490,327.2
+108,East Lindsey,293,206.7
+109,East Lothian,320,298.8
+110,East Northamptonshire,487,515.2
+111,East Renfrewshire,489,511.9
+112,East Riding of Yorkshire,1795,526.1
+113,East Staffordshire,757,632.1
+114,East Suffolk,944,378.4
+115,Eastbourne,503,484.8
+116,Eastleigh,474,354.8
+117,Eden,228,428.1
+118,Elmbridge,555,405.7
+119,Enfield,1517,454.5
+120,Epping Forest,582,442.0
+121,Epsom and Ewell,385,477.5
+122,Erewash,483,418.6
+123,Exeter,297,226.0
+124,Falkirk,742,461.2
+125,Fareham,341,293.4
+126,Fenland,527,517.4
+127,Fermanagh and Omagh,218,185.7
+128,Fife,1044,279.5
+129,Flintshire,832,533.0
+130,Folkestone and Hythe,827,731.9
+131,Forest of Dean,184,212.0
+132,Fylde,528,653.6
+133,Gateshead,1616,799.8
+134,Gedling,450,381.7
+135,Glasgow City,3476,549.0
+136,Gloucester,599,463.9
+137,Gosport,251,295.9
+138,Gravesham,656,613.4
+139,Great Yarmouth,429,431.9
+140,Greenwich,1151,399.7
+141,Guildford,645,432.9
+142,Gwynedd,650,521.8
+143,Hackney and City of London,1312,451.1
+144,Halton,841,649.9
+145,Hambleton,371,405.0
+146,Hammersmith and Fulham,1012,546.6
+147,Harborough,477,508.5
+148,Haringey,1047,389.7
+149,Harlow,419,481.2
+150,Harrogate,875,544.0
+151,Harrow,1579,628.7
+152,Hart,300,309.0
+153,Hartlepool,739,789.0
+154,Hastings,185,199.7
+155,Havant,399,316.1
+156,Havering,1258,484.7
+157,"Herefordshire, County of",969,502.6
+158,Hertsmere,624,594.7
+159,High Peak,527,568.7
+160,Highland,291,123.4
+161,Hillingdon,1423,463.7
+162,Hinckley and Bosworth,637,563.0
+163,Horsham,589,409.6
+164,Hounslow,1441,530.7
+165,Huntingdonshire,986,554.0
+166,Hyndburn,627,773.7
+167,Inverclyde,391,502.6
+168,Ipswich,746,544.9
+169,Isle of Anglesey,480,685.3
+170,Isle of Wight,446,314.6
+171,Islington,752,310.1
+172,Kensington and Chelsea,780,499.6
+173,Kettering,754,740.8
+174,King's Lynn and West Norfolk,886,585.3
+175,"Kingston upon Hull, City of",1667,641.7
+176,Kingston upon Thames,877,494.1
+177,Kirklees,3462,787.2
+178,Knowsley,1267,839.8
+179,Lambeth,1730,530.6
+180,Lancaster,967,662.2
+181,Leeds,5516,695.5
+182,Leicester,6183,1745.5
+183,Lewes,413,399.9
+184,Lewisham,1444,472.1
+185,Lichfield,465,443.9
+186,Lincoln,377,379.7
+187,Lisburn and Castlereagh,757,518.5
+188,Liverpool,3506,704.0
+189,Luton,1839,863.2
+190,Maidstone,713,415.0
 191,Maldon,156,240.3
-192,Malvern Hills,271,344.4
-193,Manchester,4852,877.6
-194,Mansfield,417,381.5
-195,Medway,1158,415.7
-196,Melton,238,464.8
-197,Mendip,177,153.1
-198,Merthyr Tydfil,639,1059.2
-199,Merton,1069,517.6
-200,Mid and East Antrim,746,535.6
+192,Malvern Hills,280,355.8
+193,Manchester,5053,914.0
+194,Mansfield,437,399.8
+195,Medway,1166,418.6
+196,Melton,243,474.5
+197,Mendip,182,157.5
+198,Merthyr Tydfil,655,1085.8
+199,Merton,1084,524.8
+200,Mid and East Antrim,764,548.6
 201,Mid Devon,235,285.5
-202,Mid Suffolk,363,349.4
-203,Mid Sussex,679,449.6
-204,Mid Ulster,463,311.7
-205,Middlesbrough,1199,850.5
-206,Midlothian,567,613.2
-207,Milton Keynes,1027,381.1
-208,Mole Valley,370,424.1
-209,Monmouthshire,397,419.7
-210,Moray,114,119.0
+202,Mid Suffolk,364,350.4
+203,Mid Sussex,686,454.2
+204,Mid Ulster,469,315.8
+205,Middlesbrough,1216,862.5
+206,Midlothian,574,620.8
+207,Milton Keynes,1037,384.8
+208,Mole Valley,375,429.8
+209,Monmouthshire,399,421.8
+210,Moray,116,121.1
 211,Na h-Eileanan Siar,9,33.7
-212,Neath Port Talbot,724,505.2
-213,New Forest,548,304.3
-214,Newark and Sherwood,486,397.0
-215,Newcastle upon Tyne,1926,636.0
-216,Newcastle-under-Lyme,900,695.3
-217,Newham,1642,465.0
-218,Newport,961,621.3
-219,"Newry, Mourne and Down",574,316.5
-220,North Ayrshire,458,339.9
-221,North Devon,143,147.2
-222,North East Derbyshire,666,656.4
-223,North East Lincolnshire,259,162.3
-224,North Hertfordshire,428,320.4
-225,North Kesteven,274,234.4
-226,North Lanarkshire,1635,479.0
-227,North Lincolnshire,798,463.2
-228,North Norfolk,233,222.2
-229,North Somerset,1020,474.3
-230,North Tyneside,1098,528.1
-231,North Warwickshire,376,576.1
-232,North West Leicestershire,369,356.1
-233,Northampton,1906,848.6
-234,Northumberland,1774,550.2
-235,Norwich,367,261.1
-236,Nottingham,1489,447.3
-237,Nuneaton and Bedworth,966,743.7
-238,Oadby and Wigston,607,1064.6
-239,Oldham,3199,1349.2
+212,Neath Port Talbot,733,511.5
+213,New Forest,559,310.4
+214,Newark and Sherwood,491,401.1
+215,Newcastle upon Tyne,1996,659.1
+216,Newcastle-under-Lyme,916,707.7
+217,Newham,1683,476.6
+218,Newport,1011,653.6
+219,"Newry, Mourne and Down",596,328.6
+220,North Ayrshire,467,346.6
+221,North Devon,146,150.3
+222,North East Derbyshire,677,667.2
+223,North East Lincolnshire,265,166.1
+224,North Hertfordshire,434,324.9
+225,North Kesteven,289,247.2
+226,North Lanarkshire,1705,499.5
+227,North Lincolnshire,819,475.4
+228,North Norfolk,234,223.2
+229,North Somerset,1034,480.8
+230,North Tyneside,1131,544.0
+231,North Warwickshire,377,577.7
+232,North West Leicestershire,374,361.0
+233,Northampton,1946,866.4
+234,Northumberland,1814,562.6
+235,Norwich,375,266.8
+236,Nottingham,1532,460.2
+237,Nuneaton and Bedworth,979,753.8
+238,Oadby and Wigston,635,1113.7
+239,Oldham,3327,1403.1
 240,Orkney Islands,17,76.3
-241,Oxford,1073,703.8
-242,Pembrokeshire,331,263.1
-243,Pendle,993,1078.0
-244,Perth and Kinross,532,350.1
-245,Peterborough,1703,842.0
-246,Plymouth,793,302.6
-247,Portsmouth,592,275.5
-248,Powys,422,318.6
-249,Preston,1618,1130.4
-250,Reading,906,560.0
-251,Redbridge,1451,475.4
-252,Redcar and Cleveland,810,590.6
-253,Redditch,450,527.8
-254,Reigate and Banstead,861,578.8
-255,Renfrewshire,848,473.5
-256,Rhondda Cynon Taf,2064,855.5
-257,Ribble Valley,246,404.0
-258,Richmond upon Thames,707,357.0
-259,Richmondshire,295,549.0
-260,Rochdale,2492,1120.4
-261,Rochford,320,366.3
-262,Rossendale,414,579.2
-263,Rother,215,223.8
-264,Rotherham,2291,863.2
-265,Rugby,462,424.1
-266,Runnymede,384,429.4
-267,Rushcliffe,465,390.2
-268,Rushmoor,642,678.7
-269,Rutland,120,300.5
-270,Ryedale,152,274.5
-271,Salford,2110,815.2
-272,Sandwell,2421,737.1
-273,Scarborough,623,572.8
-274,Scottish Borders,395,342.0
-275,Sedgemoor,423,343.4
-276,Sefton,1841,666.0
-277,Selby,397,438.1
-278,Sevenoaks,427,353.6
-279,Sheffield,5011,856.8
+241,Oxford,1087,713.0
+242,Pembrokeshire,334,265.5
+243,Pendle,1018,1105.2
+244,Perth and Kinross,538,354.1
+245,Peterborough,1725,852.9
+246,Plymouth,815,311.0
+247,Portsmouth,597,277.8
+248,Powys,447,337.5
+249,Preston,1685,1177.2
+250,Reading,912,563.7
+251,Redbridge,1506,493.4
+252,Redcar and Cleveland,823,600.1
+253,Redditch,461,540.7
+254,Reigate and Banstead,874,587.6
+255,Renfrewshire,870,485.8
+256,Rhondda Cynon Taf,2178,902.7
+257,Ribble Valley,254,417.2
+258,Richmond upon Thames,722,364.6
+259,Richmondshire,299,556.5
+260,Rochdale,2575,1157.8
+261,Rochford,324,370.8
+262,Rossendale,437,611.3
+263,Rother,221,230.0
+264,Rotherham,2348,884.7
+265,Rugby,482,442.5
+266,Runnymede,393,439.5
+267,Rushcliffe,480,402.7
+268,Rushmoor,649,686.1
+269,Rutland,123,308.1
+270,Ryedale,156,281.7
+271,Salford,2201,850.4
+272,Sandwell,2526,769.1
+273,Scarborough,651,598.6
+274,Scottish Borders,415,359.3
+275,Sedgemoor,429,348.3
+276,Sefton,1919,694.3
+277,Selby,419,462.4
+278,Sevenoaks,435,360.2
+279,Sheffield,5133,877.7
 280,Shetland Islands,57,248.7
-281,Shropshire,1573,486.8
-282,Slough,808,540.3
-283,Solihull,1186,548.1
-284,Somerset West and Taunton,482,310.7
-285,South Ayrshire,466,413.8
-286,South Bucks,262,371.9
-287,South Cambridgeshire,421,264.6
-288,South Derbyshire,467,435.4
-289,South Gloucestershire,889,311.8
-290,South Hams,123,141.4
-291,South Holland,724,762.0
-292,South Kesteven,477,334.9
-293,South Lakeland,654,622.3
-294,South Lanarkshire,1587,495.1
-295,South Norfolk,369,261.9
-296,South Northamptonshire,314,332.3
-297,South Oxfordshire,672,473.0
-298,South Ribble,628,566.8
-299,South Somerset,371,220.4
-300,South Staffordshire,455,404.7
-301,South Tyneside,1184,784.2
-302,Southampton,1047,414.6
-303,Southend-on-Sea,794,433.6
-304,Southwark,1735,544.2
-305,Spelthorne,434,434.7
-306,St Albans,637,429.1
-307,St. Helens,1417,784.7
-308,Stafford,652,474.9
-309,Staffordshire Moorlands,428,434.8
-310,Stevenage,374,425.7
-311,Stirling,271,287.7
-312,Stockport,2114,720.5
-313,Stockton-on-Tees,1115,565.0
-314,Stoke-on-Trent,1801,702.5
-315,Stratford-on-Avon,584,448.9
-316,Stroud,302,251.7
-317,Sunderland,2156,776.4
-318,Surrey Heath,484,542.0
-319,Sutton,1121,543.3
-320,Swale,601,400.4
-321,Swansea,1424,576.5
-322,Swindon,1319,593.6
-323,Tameside,2208,974.9
-324,Tamworth,400,521.5
-325,Tandridge,364,413.0
-326,Teignbridge,238,177.4
-327,Telford and Wrekin,727,404.2
-328,Tendring,679,463.3
-329,Test Valley,564,447.1
+281,Shropshire,1595,493.6
+282,Slough,822,549.7
+283,Solihull,1268,586.0
+284,Somerset West and Taunton,488,314.6
+285,South Ayrshire,475,421.8
+286,South Bucks,270,383.3
+287,South Cambridgeshire,429,269.7
+288,South Derbyshire,479,446.6
+289,South Gloucestershire,911,319.5
+290,South Hams,125,143.7
+291,South Holland,736,774.6
+292,South Kesteven,496,348.3
+293,South Lakeland,659,627.1
+294,South Lanarkshire,1635,510.1
+295,South Norfolk,376,266.9
+296,South Northamptonshire,317,335.5
+297,South Oxfordshire,676,475.9
+298,South Ribble,651,587.6
+299,South Somerset,375,222.8
+300,South Staffordshire,470,418.0
+301,South Tyneside,1238,820.0
+302,Southampton,1059,419.4
+303,Southend-on-Sea,807,440.7
+304,Southwark,1759,551.7
+305,Spelthorne,444,444.7
+306,St Albans,665,448.0
+307,St. Helens,1485,822.3
+308,Stafford,664,483.7
+309,Staffordshire Moorlands,437,443.9
+310,Stevenage,388,441.7
+311,Stirling,275,291.9
+312,Stockport,2191,746.7
+313,Stockton-on-Tees,1139,577.2
+314,Stoke-on-Trent,1828,713.0
+315,Stratford-on-Avon,586,450.4
+316,Stroud,311,259.2
+317,Sunderland,2245,808.4
+318,Surrey Heath,488,546.4
+319,Sutton,1128,546.6
+320,Swale,604,402.4
+321,Swansea,1442,583.8
+322,Swindon,1323,595.4
+323,Tameside,2323,1025.6
+324,Tamworth,410,534.6
+325,Tandridge,374,424.4
+326,Teignbridge,241,179.6
+327,Telford and Wrekin,738,410.3
+328,Tendring,680,464.0
+329,Test Valley,570,451.8
 330,Tewkesbury,291,306.3
-331,Thanet,943,664.4
-332,Three Rivers,424,454.3
-333,Thurrock,643,368.8
-334,Tonbridge and Malling,398,301.2
-335,Torbay,318,233.4
-336,Torfaen,377,401.2
-337,Torridge,64,93.7
-338,Tower Hamlets,1136,349.8
-339,Trafford,1823,768.1
-340,Tunbridge Wells,543,457.4
-341,Uttlesford,337,369.2
-342,Vale of Glamorgan,829,620.6
-343,Vale of White Horse,559,411.0
-344,Wakefield,2243,644.0
-345,Walsall,1794,628.4
-346,Waltham Forest,1246,449.8
-347,Wandsworth,1532,464.7
-348,Warrington,1612,767.6
-349,Warwick,503,349.9
-350,Watford,689,713.4
-351,Waverley,546,432.2
-352,Wealden,526,325.7
-353,Wellingborough,454,569.6
-354,Welwyn Hatfield,503,408.8
-355,West Berkshire,549,346.5
-356,West Devon,78,139.8
-357,West Dunbartonshire,554,623.0
-358,West Lancashire,854,747.1
-359,West Lindsey,194,202.8
-360,West Lothian,567,309.7
-361,West Oxfordshire,589,532.3
-362,West Suffolk,570,318.4
-363,Westminster,1036,396.5
-364,Wigan,2488,757.0
-365,Wiltshire,1503,300.6
-366,Winchester,525,420.5
-367,Windsor and Maidenhead,550,363.2
-368,Wirral,2515,776.2
-369,Woking,437,433.6
-370,Wokingham,670,391.5
-371,Wolverhampton,1801,683.9
-372,Worcester,451,445.6
-373,Worthing,474,428.7
-374,Wrexham,1453,1068.7
-375,Wychavon,500,386.3
-376,Wycombe,559,320.8
-377,Wyre,707,630.7
-378,Wyre Forest,450,444.3
-379,York,1017,482.9
+331,Thanet,944,665.2
+332,Three Rivers,432,462.9
+333,Thurrock,654,375.1
+334,Tonbridge and Malling,406,307.2
+335,Torbay,319,234.1
+336,Torfaen,388,412.9
+337,Torridge,65,95.2
+338,Tower Hamlets,1179,363.1
+339,Trafford,1867,786.6
+340,Tunbridge Wells,550,463.3
+341,Uttlesford,339,371.4
+342,Vale of Glamorgan,832,622.8
+343,Vale of White Horse,564,414.7
+344,Wakefield,2285,656.0
+345,Walsall,1835,642.8
+346,Waltham Forest,1279,461.8
+347,Wandsworth,1569,475.9
+348,Warrington,1712,815.2
+349,Warwick,509,354.1
+350,Watford,695,719.6
+351,Waverley,550,435.4
+352,Wealden,533,330.1
+353,Wellingborough,460,577.1
+354,Welwyn Hatfield,518,421.0
+355,West Berkshire,553,349.0
+356,West Devon,79,141.6
+357,West Dunbartonshire,579,651.1
+358,West Lancashire,868,759.4
+359,West Lindsey,206,215.3
+360,West Lothian,578,315.7
+361,West Oxfordshire,596,538.7
+362,West Suffolk,577,322.3
+363,Westminster,1058,404.9
+364,Wigan,2564,780.1
+365,Wiltshire,1515,303.0
+366,Winchester,530,424.5
+367,Windsor and Maidenhead,593,391.6
+368,Wirral,2652,818.5
+369,Woking,441,437.5
+370,Wokingham,673,393.3
+371,Wolverhampton,1854,704.0
+372,Worcester,461,455.4
+373,Worthing,480,434.1
+374,Wrexham,1463,1076.1
+375,Wychavon,518,400.2
+376,Wycombe,564,323.6
+377,Wyre,737,657.5
+378,Wyre Forest,460,454.1
+379,York,1051,499.0
