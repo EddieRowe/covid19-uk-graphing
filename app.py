@@ -14,7 +14,7 @@ app.title = "COVID-19 UK Data Graphing"
 # Load data
 df = pd.read_csv('new_cases.csv')
 df2 = pd.read_csv('cum_cases.csv')
-
+df4 = pd.read_csv('new_cases_ltla.csv')
 
 # Get and format date
 df['Date'] = pd.to_datetime(df['Date'])
@@ -94,6 +94,10 @@ df3 = pd.read_csv('coordinateList', header = None)
 df2['lat'] = df3[0];
 df2['lon'] = df3[1];
 
+df5 = pd.read_csv('coordinateList_dailyltla', header = None)
+df4['lat'] = df5[0];
+df4['lon'] = df5[1];
+
 # Line graph of avg tests by date
 fig5 = px.line(df, x="Date", y="Tests", color="Area", 
             title="Daily Tests by Nation (7-day rolling average)", 
@@ -136,6 +140,39 @@ fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k
 
 
 
+
+
+
+
+# Scatter graph of new cases today by area
+fig_scatter_daily = px.scatter_geo(df4, lon=df4['lon'], lat=df4['lat'],
+                    color="Cases",
+                    title="New Cases Today by Local Authority", 
+                    width=1000, height=600,
+                    hover_name="Area",
+                    size="Cases",
+                    scope="europe",
+                    template="plotly_dark",
+                    center={"lat": 53.643666, "lon": -3.898219},
+                    #animation_frame="Date"
+            )
+
+fig_scatter_daily .update_geos(
+    resolution=50,
+    fitbounds="locations"
+)
+
+fig_scatter_daily .update_layout(hovermode='x unified', 
+                plot_bgcolor='#232627', 
+                paper_bgcolor='#232627',
+                margin={"r":0,"t":50,"l":0,"b":0}    
+)
+
+fig_scatter_daily .update_traces(hovertemplate = '<b>%{hovertext}</b><br>Daily Cases: %{marker.size}')
+
+
+
+
 # Webpage layout, (css is loaded from assets/styles.css)
 app.layout = html.Div(
     [
@@ -150,7 +187,22 @@ app.layout = html.Div(
             ]
         ),
             
-        # Insert graphs
+            
+        html.Div(
+            className="graphs",
+            children=[
+                dcc.Graph(
+                    id='chart_cases_scatter_daily',
+                    figure=fig_scatter_daily,
+                    config={
+                    'displaylogo': False,
+                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
+                    }
+                )
+            ]
+        ),             
+            
+     
         html.Div(
             className="graphs",
             children=[
@@ -211,6 +263,11 @@ app.layout = html.Div(
             ]
         ),         
 
+
+
+
+
+
         html.Div(
             className="graphs",
             children=[
@@ -223,7 +280,9 @@ app.layout = html.Div(
                     }
                 )
             ]
-        ),       
+        ),  
+                    
+
                
         # Footer
         html.Div(
