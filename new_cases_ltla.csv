@@ -1,0 +1,384 @@
+,Area,Cases
+0,Aberdeen City,8
+1,Aberdeenshire,1
+2,Adur,3
+3,Allerdale,1
+4,Amber Valley,3
+5,Angus,1
+6,Antrim and Newtownabbey,12
+7,Ards and North Down,6
+8,Argyll and Bute,5
+9,"Armagh City, Banbridge and Craigavon",14
+10,Arun,0
+11,Ashfield,6
+12,Ashford,2
+13,Aylesbury Vale,8
+14,Babergh,1
+15,Barking and Dagenham,7
+16,Barnet,9
+17,Barnsley,11
+18,Barrow-in-Furness,8
+19,Basildon,4
+20,Basingstoke and Deane,0
+21,Bassetlaw,0
+22,Bath and North East Somerset,1
+23,Bedford,2
+24,Belfast,30
+25,Bexley,3
+26,Birmingham,144
+27,Blaby,18
+28,Blackburn with Darwen,36
+29,Blackpool,13
+30,Blaenau Gwent,0
+31,Bolsover,9
+32,Bolton,130
+33,Boston,0
+34,"Bournemouth, Christchurch and Poole",4
+35,Bracknell Forest,1
+36,Bradford,90
+37,Braintree,0
+38,Breckland,0
+39,Brent,6
+40,Brentwood,2
+41,Bridgend,0
+42,Brighton and Hove,14
+43,"Bristol, City of",5
+44,Broadland,2
+45,Bromley,9
+46,Bromsgrove,4
+47,Broxbourne,4
+48,Broxtowe,7
+49,Burnley,20
+50,Bury,35
+51,Caerphilly,1
+52,Calderdale,25
+53,Cambridge,1
+54,Camden,10
+55,Cannock Chase,3
+56,Canterbury,3
+57,Cardiff,1
+58,Carlisle,0
+59,Carmarthenshire,0
+60,Castle Point,0
+61,Causeway Coast and Glens,4
+62,Central Bedfordshire,8
+63,Ceredigion,0
+64,Charnwood,13
+65,Chelmsford,1
+66,Cheltenham,3
+67,Cherwell,4
+68,Cheshire East,21
+69,Cheshire West and Chester,16
+70,Chesterfield,3
+71,Chichester,2
+72,Chiltern,1
+73,Chorley,18
+74,City of Edinburgh,20
+75,City of London,0
+76,Clackmannanshire,0
+77,Colchester,1
+78,Conwy,1
+79,Copeland,3
+80,Corby,5
+81,Cornwall and Isles of Scilly,11
+82,Cotswold,4
+83,County Durham,34
+84,Coventry,33
+85,Craven,7
+86,Crawley,3
+87,Croydon,4
+88,Dacorum,3
+89,Darlington,3
+90,Dartford,4
+91,Daventry,2
+92,Denbighshire,2
+93,Derby,11
+94,Derbyshire Dales,2
+95,Derry City and Strabane,23
+96,Doncaster,17
+97,Dorset,3
+98,Dover,1
+99,Dudley,17
+100,Dumfries and Galloway,7
+101,Dundee City,8
+102,Ealing,9
+103,East Ayrshire,0
+104,East Cambridgeshire,0
+105,East Devon,2
+106,East Dunbartonshire,3
+107,East Hampshire,0
+108,East Hertfordshire,0
+109,East Lindsey,3
+110,East Lothian,7
+111,East Northamptonshire,0
+112,East Renfrewshire,5
+113,East Riding of Yorkshire,16
+114,East Staffordshire,5
+115,East Suffolk,5
+116,Eastbourne,2
+117,Eastleigh,3
+118,Eden,4
+119,Elmbridge,3
+120,Enfield,11
+121,Epping Forest,4
+122,Epsom and Ewell,1
+123,Erewash,4
+124,Exeter,2
+125,Falkirk,11
+126,Fareham,0
+127,Fenland,0
+128,Fermanagh and Omagh,3
+129,Fife,3
+130,Flintshire,0
+131,Folkestone and Hythe,1
+132,Forest of Dean,0
+133,Fylde,5
+134,Gateshead,38
+135,Gedling,4
+136,Glasgow City,63
+137,Gloucester,0
+138,Gosport,1
+139,Gravesham,3
+140,Great Yarmouth,3
+141,Greenwich,6
+142,Guildford,3
+143,Gwynedd,0
+144,Hackney and City of London,9
+145,Halton,31
+146,Hambleton,5
+147,Hammersmith and Fulham,9
+148,Harborough,5
+149,Haringey,14
+150,Harlow,1
+151,Harrogate,10
+152,Harrow,1
+153,Hart,2
+154,Hartlepool,12
+155,Hastings,0
+156,Havant,2
+157,Havering,14
+158,"Herefordshire, County of",4
+159,Hertsmere,6
+160,High Peak,9
+161,Highland,6
+162,Hillingdon,8
+163,Hinckley and Bosworth,2
+164,Horsham,2
+165,Hounslow,17
+166,Huntingdonshire,4
+167,Hyndburn,20
+168,Inverclyde,2
+169,Ipswich,2
+170,Isle of Anglesey,3
+171,Isle of Wight,0
+172,Isles of Scilly,0
+173,Islington,5
+174,Kensington and Chelsea,4
+175,Kettering,8
+176,King's Lynn and West Norfolk,2
+177,"Kingston upon Hull, City of",1
+178,Kingston upon Thames,6
+179,Kirklees,72
+180,Knowsley,41
+181,Lambeth,4
+182,Lancaster,8
+183,Leeds,117
+184,Leicester,57
+185,Lewes,1
+186,Lewisham,6
+187,Lichfield,4
+188,Lincoln,6
+189,Lisburn and Castlereagh,13
+190,Liverpool,136
+191,Luton,3
+192,Maidstone,3
+193,Maldon,0
+194,Malvern Hills,4
+195,Manchester,115
+196,Mansfield,7
+197,Medway,4
+198,Melton,0
+199,Mendip,4
+200,Merthyr Tydfil,0
+201,Merton,7
+202,Mid and East Antrim,9
+203,Mid Devon,2
+204,Mid Suffolk,3
+205,Mid Sussex,2
+206,Mid Ulster,6
+207,Middlesbrough,7
+208,Midlothian,5
+209,Milton Keynes,2
+210,Mole Valley,1
+211,Monmouthshire,0
+212,Moray,2
+213,Na h-Eileanan Siar,0
+214,Neath Port Talbot,0
+215,New Forest,2
+216,Newark and Sherwood,5
+217,Newcastle upon Tyne,51
+218,Newcastle-under-Lyme,4
+219,Newham,3
+220,Newport,0
+221,"Newry, Mourne and Down",7
+222,North Ayrshire,6
+223,North Devon,0
+224,North East Derbyshire,4
+225,North East Lincolnshire,2
+226,North Hertfordshire,2
+227,North Kesteven,6
+228,North Lanarkshire,25
+229,North Lincolnshire,4
+230,North Norfolk,0
+231,North Somerset,4
+232,North Tyneside,24
+233,North Warwickshire,3
+234,North West Leicestershire,0
+235,Northampton,3
+236,Northumberland,25
+237,Norwich,0
+238,Nottingham,31
+239,Nuneaton and Bedworth,6
+240,Oadby and Wigston,10
+241,Oldham,45
+242,Orkney Islands,0
+243,Oxford,6
+244,Pembrokeshire,0
+245,Pendle,30
+246,Perth and Kinross,3
+247,Peterborough,4
+248,Plymouth,4
+249,Portsmouth,3
+250,Powys,0
+251,Preston,25
+252,Reading,2
+253,Redbridge,18
+254,Redcar and Cleveland,1
+255,Redditch,2
+256,Reigate and Banstead,6
+257,Renfrewshire,13
+258,Resident outside Wales,0
+259,Rhondda Cynon Taf,0
+260,Ribble Valley,2
+261,Richmond upon Thames,5
+262,Richmondshire,1
+263,Rochdale,48
+264,Rochford,0
+265,Rossendale,32
+266,Rother,0
+267,Rotherham,24
+268,Rugby,22
+269,Runnymede,2
+270,Rushcliffe,7
+271,Rushmoor,1
+272,Rutland,0
+273,Ryedale,0
+274,Salford,60
+275,Sandwell,31
+276,Scarborough,8
+277,Scottish Borders,4
+278,Sedgemoor,2
+279,Sefton,34
+280,Selby,10
+281,Sevenoaks,2
+282,Sheffield,55
+283,Shetland Islands,0
+284,Shropshire,3
+285,Slough,3
+286,Solihull,26
+287,Somerset West and Taunton,0
+288,South Ayrshire,3
+289,South Bucks,2
+290,South Cambridgeshire,3
+291,South Derbyshire,3
+292,South Gloucestershire,9
+293,South Hams,0
+294,South Holland,1
+295,South Kesteven,6
+296,South Lakeland,3
+297,South Lanarkshire,15
+298,South Norfolk,0
+299,South Northamptonshire,2
+300,South Oxfordshire,0
+301,South Ribble,15
+302,South Somerset,0
+303,South Staffordshire,6
+304,South Tyneside,36
+305,Southampton,7
+306,Southend-on-Sea,4
+307,Southwark,7
+308,Spelthorne,1
+309,St Albans,9
+310,St. Helens,61
+311,Stafford,6
+312,Staffordshire Moorlands,4
+313,Stevenage,4
+314,Stirling,5
+315,Stockport,25
+316,Stockton-on-Tees,7
+317,Stoke-on-Trent,15
+318,Stratford-on-Avon,1
+319,Stroud,0
+320,Sunderland,40
+321,Surrey Heath,2
+322,Sutton,5
+323,Swale,6
+324,Swansea,0
+325,Swindon,5
+326,Tameside,41
+327,Tamworth,6
+328,Tandridge,3
+329,Teignbridge,2
+330,Telford and Wrekin,6
+331,Tendring,2
+332,Test Valley,0
+333,Tewkesbury,4
+334,Thanet,4
+335,Three Rivers,3
+336,Thurrock,4
+337,Tonbridge and Malling,2
+338,Torbay,0
+339,Torfaen,0
+340,Torridge,3
+341,Tower Hamlets,1
+342,Trafford,25
+343,Tunbridge Wells,1
+344,Uttlesford,1
+345,Vale of Glamorgan,0
+346,Vale of White Horse,2
+347,Wakefield,27
+348,Walsall,21
+349,Waltham Forest,12
+350,Wandsworth,9
+351,Warrington,38
+352,Warwick,7
+353,Watford,2
+354,Waverley,1
+355,Wealden,0
+356,Wellingborough,4
+357,Welwyn Hatfield,1
+358,West Berkshire,2
+359,West Devon,0
+360,West Dunbartonshire,17
+361,West Lancashire,12
+362,West Lindsey,4
+363,West Lothian,6
+364,West Oxfordshire,0
+365,West Suffolk,3
+366,Westminster,5
+367,Wigan,52
+368,Wiltshire,10
+369,Winchester,0
+370,Windsor and Maidenhead,9
+371,Wirral,68
+372,Woking,1
+373,Wokingham,3
+374,Wolverhampton,35
+375,Worcester,0
+376,Worthing,1
+377,Wrexham,0
+378,Wychavon,1
+379,Wycombe,4
+380,Wyre,14
+381,Wyre Forest,5
+382,York,9
