@@ -42,3 +42,4 @@ uk-covid19==1.2.0
 urllib3==1.25.8
 webencodings==0.5.1
 Werkzeug==1.0.1
+xlrd==1.0.0
