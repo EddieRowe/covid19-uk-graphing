@@ -13,7 +13,7 @@ app.title = "COVID-19 UK Data Graphing"
 # Load data
 df_nation = pd.read_csv('new_cases.csv')
 df_ltla_cum_rate_cases = pd.read_csv('cum_cases.csv')
-df_ltla_daily_cases = pd.read_csv('new_cases_ltla.csv')
+df_ltla_daily_cases = pd.read_excel('new_cases_ltla_2.xls')
 
 # Assign coords to ltlas
 df_ltla_cum_coords = pd.read_csv('coordinateList', header = None)
@@ -144,7 +144,7 @@ fig_scattermap_ltla_cases_rate.update_traces(hovertemplate = '<b>%{hovertext}</b
 fig_scattermap_ltla_cases_daily = px.scatter_geo(df_ltla_daily_cases, lon=df_ltla_daily_cases['lon'], lat=df_ltla_daily_cases['lat'],
                     color="Cases",
                     title="New Cases Today by Local Authority", 
-                    width=1000, height=600,
+                    width=1000, height=680,
                     hover_name="Area",
                     size="Cases",
                     scope="europe",
