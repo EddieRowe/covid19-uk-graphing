@@ -10,15 +10,24 @@ app = dash.Dash(__name__)
 server = app.server
 app.title = "COVID-19 UK Data Graphing"
 
-
 # Load data
-df = pd.read_csv('new_cases.csv')
-df2 = pd.read_csv('cum_cases.csv')
-df4 = pd.read_csv('new_cases_ltla.csv')
+df_nation = pd.read_csv('new_cases.csv')
+df_ltla_cum_rate_cases = pd.read_csv('cum_cases.csv')
+df_ltla_daily_cases = pd.read_csv('new_cases_ltla.csv')
+
+# Assign coords to ltlas
+df_ltla_cum_coords = pd.read_csv('coordinateList', header = None)
+df_ltla_cum_rate_cases['lat'] = df_ltla_cum_coords[0];
+df_ltla_cum_rate_cases['lon'] = df_ltla_cum_coords[1];
+# PHE provides different lists of areas for different metrics,
+# so I've had to create different lists of associated coordinates.
+df_ltla_daily_coords = pd.read_csv('coordinateList_dailyltla', header = None)
+df_ltla_daily_cases['lat'] = df_ltla_daily_coords[0];
+df_ltla_daily_cases['lon'] = df_ltla_daily_coords[1];
 
 # Get and format date
-df['Date'] = pd.to_datetime(df['Date'])
-date_time = df['Date'].max()
+df_nation['Date'] = pd.to_datetime(df_nation['Date'])
+date_time = df_nation['Date'].max()
 date = date_time.strftime("%d/%m/%Y")
 
 datestring = "PHE data from ", date, "."
@@ -26,94 +35,86 @@ info = ""
 desc = 'Graphs generated using recent data from Public Health England.'
 
 # Line graph of deaths by date
-fig = px.line(df, x="Date", y="Deaths", color="Area", 
+fig_line_deaths_raw = px.line(df_nation, x="Date", y="Deaths", color="Area", 
             title="Daily Deaths by Nation", 
             width=600, height=350,
             template="plotly_dark"
 )
 
 # Set style elements
-fig.update_layout(hovermode='x unified', 
+fig_line_deaths_raw.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627'
 )
 
 # Set hover style
-fig.update_traces(hovertemplate = '<br>Deaths: %{y}')
+fig_line_deaths_raw.update_traces(hovertemplate = '<br>Deaths: %{y}')
 
 # Line graph of cases by date
-fig2 = px.line(df, x="Date", y="Cases", color="Area", 
+fig_line_cases_raw = px.line(df_nation, x="Date", y="Cases", color="Area", 
             title="Daily Cases by Nation", 
             width=600, height=350,
             template="plotly_dark"
 )
 
-fig2.update_layout(hovermode='x unified', 
+fig_line_cases_raw.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627'
 )
 
-fig2.update_traces(hovertemplate = '<br>Cases: %{y}')
+fig_line_cases_raw.update_traces(hovertemplate = '<br>Cases: %{y}')
 
 
 # Calculate 7 day rolling avgs
-df['Deaths'] = df['Deaths'].rolling(window=7).mean()
-df['Cases'] = df['Cases'].rolling(window=7).mean()
-df['Tests'] = df['Tests'].rolling(window=7).mean()
+df_nation['Deaths'] = df_nation['Deaths'].rolling(window=7).mean()
+df_nation['Cases'] = df_nation['Cases'].rolling(window=7).mean()
+df_nation['Tests'] = df_nation['Tests'].rolling(window=7).mean()
 
 # Line graph of deaths by date (7 day rolling avg)
-fig3 = px.line(df, x="Date", y="Deaths", color="Area", 
+fig_line_deaths_avg = px.line(df_nation, x="Date", y="Deaths", color="Area", 
             title="Daily Deaths by Nation (7-day rolling average)", 
             width=600, height=350,
             template="plotly_dark"
 )
 
-fig3.update_layout(hovermode='x unified', 
+fig_line_deaths_avg.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627'
 )
 
-fig3.update_traces(hovertemplate = '<br>Deaths: %{y}')
+fig_line_deaths_avg.update_traces(hovertemplate = '<br>Deaths: %{y}')
 
 # Line graph of cases by date (7 day rolling avg)
-fig4 = px.line(df, x="Date", y="Cases", color="Area", 
+fig_line_cases_avg = px.line(df_nation, x="Date", y="Cases", color="Area", 
             title="Daily Cases by Nation (7-day rolling average)", 
             width=600, height=350,
             template="plotly_dark"
 )
 
-fig4.update_layout(hovermode='x unified', 
+fig_line_cases_avg.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627'
 )
 
-fig4.update_traces(hovertemplate = '<br>Cases: %{y}')
+fig_line_cases_avg.update_traces(hovertemplate = '<br>Cases: %{y}')
 
-# Assign coords to ltlas
-df3 = pd.read_csv('coordinateList', header = None)
-df2['lat'] = df3[0];
-df2['lon'] = df3[1];
-
-df5 = pd.read_csv('coordinateList_dailyltla', header = None)
-df4['lat'] = df5[0];
-df4['lon'] = df5[1];
 
 # Line graph of avg tests by date
-fig5 = px.line(df, x="Date", y="Tests", color="Area", 
+fig_line_tests_avg = px.line(df_nation, x="Date", y="Tests", color="Area", 
             title="Daily Tests by Nation (7-day rolling average)", 
             width=600, height=350,
             template="plotly_dark"
 )
 
-fig5.update_layout(hovermode='x unified', 
+fig_line_tests_avg.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627'
 )
 
-fig5.update_traces(hovertemplate = '<br>Tests: %{y}')
+fig_line_tests_avg.update_traces(hovertemplate = '<br>Tests: %{y}')
 
-# Scatter graph of total cases by area
-fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
+# Scatter map of rate of total cases by area
+fig_scattermap_ltla_cases_rate = px.scatter_geo(df_ltla_cum_rate_cases, lon=df_ltla_cum_rate_cases['lon'], lat=df_ltla_cum_rate_cases['lat'],
                     color="Rate",
                     title="Total Cases per 100k by Local Authority", 
                     width=1000, height=800,
@@ -125,27 +126,22 @@ fig_scatter = px.scatter_geo(df2, lon=df2['lon'], lat=df2['lat'],
                     #animation_frame="Date"
             )
 
-fig_scatter.update_geos(
+fig_scattermap_ltla_cases_rate.update_geos(
     resolution=50,
     fitbounds="locations"
 )
 
-fig_scatter.update_layout(hovermode='x unified', 
+fig_scattermap_ltla_cases_rate.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627',
                 margin={"r":0,"t":50,"l":0,"b":0}    
 )
 
-fig_scatter.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
-
-
-
-
-
+fig_scattermap_ltla_cases_rate.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
 
 
 # Scatter graph of new cases today by area
-fig_scatter_daily = px.scatter_geo(df4, lon=df4['lon'], lat=df4['lat'],
+fig_scattermap_ltla_cases_daily = px.scatter_geo(df_ltla_daily_cases, lon=df_ltla_daily_cases['lon'], lat=df_ltla_daily_cases['lat'],
                     color="Cases",
                     title="New Cases Today by Local Authority", 
                     width=1000, height=600,
@@ -157,18 +153,18 @@ fig_scatter_daily = px.scatter_geo(df4, lon=df4['lon'], lat=df4['lat'],
                     #animation_frame="Date"
             )
 
-fig_scatter_daily .update_geos(
+fig_scattermap_ltla_cases_daily.update_geos(
     resolution=50,
     fitbounds="locations"
 )
 
-fig_scatter_daily .update_layout(hovermode='x unified', 
+fig_scattermap_ltla_cases_daily.update_layout(hovermode='x unified', 
                 plot_bgcolor='#232627', 
                 paper_bgcolor='#232627',
                 margin={"r":0,"t":50,"l":0,"b":0}    
 )
 
-fig_scatter_daily .update_traces(hovertemplate = '<b>%{hovertext}</b><br>Daily Cases: %{marker.size}')
+fig_scattermap_ltla_cases_daily .update_traces(hovertemplate = '<b>%{hovertext}</b><br>Daily Cases: %{marker.size}')
 
 
 
@@ -192,8 +188,8 @@ app.layout = html.Div(
             className="graphs",
             children=[
                 dcc.Graph(
-                    id='chart_cases_scatter_daily',
-                    figure=fig_scatter_daily,
+                    id='chart_scattermap_ltla_cases_daily',
+                    figure=fig_scattermap_ltla_cases_daily,
                     config={
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
@@ -207,8 +203,8 @@ app.layout = html.Div(
             className="graphs",
             children=[
                 dcc.Graph(
-                    id='chart_cases_line',
-                    figure=fig2,
+                    id='chart_line_cases_raw',
+                    figure=fig_line_cases_raw,
                     config={
                         'displaylogo': False,
                         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
@@ -216,8 +212,8 @@ app.layout = html.Div(
                 ),
                 
                 dcc.Graph(
-                    id='chart_avgcases_line',
-                    figure=fig4,
+                    id='chart_line_cases_avg',
+                    figure=fig_line_cases_avg,
                     config={
                         'displaylogo': False,
                         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
@@ -230,8 +226,8 @@ app.layout = html.Div(
             className="graphs",
             children=[
                 dcc.Graph(
-                    id='chart_deaths_line',
-                    figure=fig,
+                    id='chart_line_deaths_raw',
+                    figure=fig_line_deaths_raw,
                     config={
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
@@ -239,8 +235,8 @@ app.layout = html.Div(
                 ),
                     
                 dcc.Graph(
-                    id='chart_avgdeaths_line',
-                    figure=fig3,
+                    id='chart_line_deaths_avg',
+                    figure=fig_line_deaths_avg,
                     config={
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
@@ -253,8 +249,8 @@ app.layout = html.Div(
             className="graphs",
             children=[             
                 dcc.Graph(
-                    id='chart_avgtests_line',
-                    figure=fig5,
+                    id='chart_line_tests_avg',
+                    figure=fig_line_tests_avg,
                     config={
                         'displaylogo': False,
                         'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
@@ -263,17 +259,12 @@ app.layout = html.Div(
             ]
         ),         
 
-
-
-
-
-
         html.Div(
             className="graphs",
             children=[
                 dcc.Graph(
-                    id='chart_cases_scatter',
-                    figure=fig_scatter,
+                    id='chart_scattermap_ltla_cases_rate',
+                    figure=fig_scattermap_ltla_cases_rate,
                     config={
                     'displaylogo': False,
                     'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
@@ -281,8 +272,6 @@ app.layout = html.Div(
                 )
             ]
         ),  
-                    
-
                
         # Footer
         html.Div(
