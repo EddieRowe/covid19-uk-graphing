@@ -246,6 +246,13 @@ app.layout = html.Div(
         ),
           
         html.Div(
+            className="centeredtext",
+            children=[
+                html.P('The chart below shows 7-day average of the number tests being processed each day by each nation in the UK. This is regardless of whether the test returns positive or negative.')
+            ]
+        ),          
+
+        html.Div(
             className="graphs",
             children=[             
                 dcc.Graph(
@@ -258,6 +265,16 @@ app.layout = html.Div(
                 )
             ]
         ),         
+
+        html.Div(
+            className="centeredtext",
+            children=[
+                html.P('The map below gives an overall idea of which areas have had the largest proportions of their populations infected since PHE case records began. The metric we use is "cases per 100k" - this allows us to more accurately compare areas, regardless of their actual populations. Bear in mind, this data is not a perfect representation of how many people have had coronavirus.'),
+                html.A('View PHE "About the data"', 
+                                href='https://coronavirus.data.gov.uk/about-data#daily-and-cumulative-numbers-of-cases', 
+                                target='_blank')
+            ]
+        ),
 
         html.Div(
             className="graphs",
