@@ -272,7 +272,8 @@ app.layout = html.Div(
                 html.P('The map below gives an overall idea of which areas have had the largest proportions of their populations infected since PHE case records began. The metric we use is "cases per 100k" - this allows us to more accurately compare areas, regardless of their actual populations. Bear in mind, this data is not a perfect representation of how many people have had coronavirus.'),
                 html.A('View PHE "About the data"', 
                                 href='https://coronavirus.data.gov.uk/about-data#daily-and-cumulative-numbers-of-cases', 
-                                target='_blank')
+                                target='_blank'),
+                html.P('')
             ]
         ),
 
