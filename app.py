@@ -13,7 +13,8 @@ app.title = "COVID-19 UK Data Graphing"
 # Load data
 df_nation = pd.read_csv('new_cases.csv')
 df_ltla_cum_rate_cases = pd.read_csv('cum_cases.csv')
-df_ltla_daily_cases = pd.read_excel('new_cases_ltla_2.xls')
+#df_ltla_daily_cases = pd.read_excel('new_cases_ltla_2.xls')
+df_ltla_daily_cases = pd.read_csv('new_cases_ltla.csv')
 
 # Assign coords to ltlas
 df_ltla_cum_coords = pd.read_csv('coordinateList', header = None)
