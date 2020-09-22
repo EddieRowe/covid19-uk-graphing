@@ -234,7 +234,7 @@ app.layout = html.Div(
         html.Div(
             className="centeredtext",
             children=[
-                html.P('The right-hand map above shows new cases today, relative to the population of each area (cases per 100k). Population data from 2018 and 2019, from the Office for National Statistics.')
+                html.P('The second map above shows new cases today, relative to the population of each area (cases per 100k). Population data from 2018 and 2019, from the Office for National Statistics.')
             ]
         ),   
                     
