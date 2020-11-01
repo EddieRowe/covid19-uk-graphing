@@ -137,59 +137,7 @@ fig_scattermap_ltla_cases_rate.update_layout(hovermode='x unified',
 fig_scattermap_ltla_cases_rate.update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k: %{marker.size}')
 
 
-# Scatter graph of new cases today by area
-fig_scattermap_ltla_cases_daily = px.scatter_geo(df_ltla_daily_cases, lon=df_ltla_daily_cases['Lon'], lat=df_ltla_daily_cases['Lat'],
-                    color="Cases",
-                    title="New Cases Today by Local Authority", 
-                    width=500, height=500,
-                    hover_name="Area",
-                    size="Cases",
-                    scope="europe",
-                    template="plotly_dark",
-                    center={"lat": 53.643666, "lon": -3.898219},
-                    #animation_frame="Date"
-            )
 
-fig_scattermap_ltla_cases_daily.update_geos(
-    resolution=50,
-    fitbounds="locations"
-)
-
-fig_scattermap_ltla_cases_daily.update_layout(hovermode='x unified', 
-                plot_bgcolor='#232627', 
-                paper_bgcolor='#232627',
-                margin={"r":0,"t":50,"l":0,"b":0}    
-)
-
-fig_scattermap_ltla_cases_daily .update_traces(hovertemplate = '<b>%{hovertext}</b><br>Daily Cases: %{marker.size}')
-
-
-
-# Scatter graph of rate today by area
-fig_scattermap_ltla_rate_daily = px.scatter_geo(df_ltla_daily_cases, lon=df_ltla_daily_cases['Lon'], lat=df_ltla_daily_cases['Lat'],
-                    color="Rate",
-                    title="New Cases Today per 100k by Local Authority", 
-                    width=500, height=500,
-                    hover_name="Area",
-                    size="Rate",
-                    scope="europe",
-                    template="plotly_dark",
-                    center={"lat": 53.643666, "lon": -3.898219},
-                    #animation_frame="Date"
-            )
-
-fig_scattermap_ltla_rate_daily.update_geos(
-    resolution=50,
-    fitbounds="locations"
-)
-
-fig_scattermap_ltla_rate_daily.update_layout(hovermode='x unified', 
-                plot_bgcolor='#232627', 
-                paper_bgcolor='#232627',
-                margin={"r":0,"t":50,"l":0,"b":0}    
-)
-
-fig_scattermap_ltla_rate_daily .update_traces(hovertemplate = '<b>%{hovertext}</b><br>Cases per 100k today: %{marker.size}')
 
 
 
@@ -209,34 +157,7 @@ app.layout = html.Div(
         ),
             
             
-        html.Div(
-            className="graphs",
-            children=[
-                dcc.Graph(
-                    id='chart_scattermap_ltla_cases_daily',
-                    figure=fig_scattermap_ltla_cases_daily,
-                    config={
-                    'displaylogo': False,
-                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
-                    }
-                ),
-                dcc.Graph(
-                    id='chart_scattermap_ltla_rate_daily',
-                    figure=fig_scattermap_ltla_rate_daily,
-                    config={
-                    'displaylogo': False,
-                    'modeBarButtonsToRemove':['toggleSpikelines', 'zoomIn2d', 'zoomOut2d','autoScale2d']
-                    }
-                )
-            ]
-        ),            
-                    
-        html.Div(
-            className="centeredtext",
-            children=[
-                html.P('The second map above shows new cases today, relative to the population of each area (cases per 100k). Population data from 2018 and 2019, from the Office for National Statistics.')
-            ]
-        ),   
+     
                     
   
             
